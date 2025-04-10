@@ -1,0 +1,90 @@
+/* Burger Button Stile */
+.burger-button {
+    display: block; /* Auf Mobile anzeigen */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1001; /* Above sidebar */
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-button span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Burger-Button Animation (wenn Menü offen) */
+body.sidebar-visible .burger-button span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+body.sidebar-visible .burger-button span:nth-child(2) { opacity: 0; }
+body.sidebar-visible .burger-button span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* --- Mobile Header --- */
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px 15px 5px;
+    margin-top: 45px; /* Space below burger button */
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-header .side-image {
+    max-height: 40px;
+    max-width: 40px;
+    flex-shrink: 0;
+    display: block;
+}
+.mobile-header .left-image { order: 1; }
+.mobile-header .right-image { order: 3; }
+
+.mobile-header h1#chatTitle {
+    order: 2;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 0 10px;
+    padding: 0;
+}
+
+/* --- Desktop Title (Hidden on Mobile) --- */
+#desktopChatTitle {
+    display: none; /* Hide the desktop H1 on mobile */
+}
+
+/* --- Desktop Header Adjustments --- */
+@media (min-width: 768px) {
+    /* Burger/Overlay */
+    .burger-button {
+        display: none; /* Hide burger on desktop */
+    }
+
+    /* Hide Mobile Header */
+    .mobile-header {
+        display: none;
+    }
+
+    /* Show Desktop Title */
+    #desktopChatTitle {
+        display: block; /* Show desktop title */
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 1.8em;
+        padding: 0;
+        flex-shrink: 0; /* Prevent shrinking */
+    }
+}

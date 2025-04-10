@@ -1,0 +1,53 @@
+/* Grundlegende Body-Stile */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #1a2530;
+    color: white;
+    position: relative; /* Wichtig, damit body.sidebar-visible funktioniert */
+}
+
+/* Meta Viewport ist im HTML */
+
+/* Overlay-Stil (Standardmäßig versteckt) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dunkler Hintergrund */
+    z-index: 999; /* Unter der Sidebar, aber über dem Inhalt */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Sichtbarer Overlay-Zustand (wenn Sidebar offen ist) */
+body.sidebar-visible .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* General Button Styles (Moved from bottom-buttons specific styles) */
+button#prevBtn, button#nextBtn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+button#prevBtn:hover:not(:disabled), button#nextBtn:hover:not(:disabled) { background-color: #45a049; }
+button:disabled { background-color: #cccccc; color: #666666; cursor: not-allowed; opacity: 0.6; }
+
+/* --- Desktop Button Styles --- */
+@media (min-width: 768px) {
+    button#prevBtn, button#nextBtn {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+}

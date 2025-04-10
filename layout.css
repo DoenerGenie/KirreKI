@@ -1,0 +1,95 @@
+/* Container für das gesamte Seitenlayout */
+.page-container {
+    display: flex; /* Wird auf Desktop verwendet */
+    width: 100%;
+    max-width: 100%; /* Volle Breite auf Mobile */
+    height: 100vh; /* Volle Viewport-Höhe */
+    background-color: #1a2530;
+    border-radius: 0; /* Kein Radius auf Mobile */
+    box-shadow: none; /* Kein Schatten auf Mobile */
+    overflow: hidden; /* Verhindert Überlauf */
+    position: relative; /* Für absolute Positionierung von Kindelementen */
+}
+
+/* --- Main Content --- */
+.main-content {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative; /* Needed for burger button positioning */
+}
+
+/* --- Content Body --- */
+.content-body {
+    display: flex;
+    flex-direction: column; /* Stack chat area on mobile */
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    gap: 10px;
+    overflow: hidden;
+    min-height: 0; /* Important for flex-grow in column */
+}
+
+/* --- Side Columns (Hide content on Mobile) --- */
+.side-column {
+    display: none; /* Hide side columns entirely on mobile by default */
+}
+.side-column .desktop-image {
+    display: none; /* Specifically hide desktop images within columns on mobile */
+}
+
+
+/* --- Desktop Layout Adjustments --- */
+@media (min-width: 768px) {
+    /* Container */
+    .page-container {
+        max-width: 1000px;
+        height: calc(100vh - 40px);
+        max-height: 800px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+    }
+
+    /* Hauptinhalt */
+    .main-content {
+        width: auto; /* Allow it to grow */
+        flex-grow: 1;
+        padding: 20px;
+        position: static; /* Reset position */
+    }
+
+     /* Content Body Layout */
+    .content-body {
+        flex-direction: row; /* Side by side on desktop */
+        gap: 15px;
+        align-items: stretch; /* Stretch items to fill height */
+    }
+
+    /* Show Side Columns & Desktop Images */
+    .side-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Center image vertically */
+        gap: 10px;
+        flex-shrink: 0;
+        width: auto; /* Adjust width as needed or based on content */
+        padding: 0 10px; /* Add some padding */
+    }
+    .side-column .desktop-image {
+        display: block;
+        max-width: 100px;
+        height: auto;
+    }
+
+    /* Ensure overlay is hidden on desktop */
+    .overlay {
+        display: none;
+    }
+}

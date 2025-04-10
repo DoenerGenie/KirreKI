@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Irritated AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="chat.css">
+</head>
+<body>
+<div id="overlay" class="overlay"></div>
+
+<div class="page-container">
+    <div id="sidebar">
+        <h2>Chats</h2>
+        <ul id="chatList">
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <button id="burgerBtn" class="burger-button" aria-label="Menü öffnen/schließen" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="mobile-header">
+            <img src="images/desperate_ai.png" alt="Desperate AI" class="side-image mobile-header-image left-image">
+            <h1 id="chatTitle">Chat Titel</h1> <img src="images/clever_kilyan.png" alt="Clever Kilian" class="side-image mobile-header-image right-image">
+        </div>
+
+        <h1 id="desktopChatTitle">Chat Titel</h1> <div class="content-body">
+        <div class="side-column left-column">
+            <img src="images/desperate_ai.png" alt="Desperate AI" class="side-image desktop-image left-image">
+        </div>
+
+        <div class="chat-wrapper">
+            <div class="chat-container">
+                <div id="chatContent" class="chat">
+                </div>
+            </div>
+        </div>
+
+        <div class="side-column right-column">
+            <img src="images/clever_kilyan.png" alt="Clever Kilian" class="side-image desktop-image right-image">
+        </div>
+    </div> <div class="bottom-buttons">
+        <button id="prevBtn">Vorheriger Chat</button>
+        <span class="chat-comment">Ein echter Chat zwischen Mensch und Meta AI</span>
+        <button id="nextBtn">Nächster Chat</button>
+    </div>
+    </div> </div> <script src="script.js"></script>
+</body>
+</html>
