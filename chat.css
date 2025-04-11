@@ -123,3 +123,13 @@
         font-size: 0.9em; /* Slightly larger comment font on desktop */
     }
 }
+
+.credit-line {
+    color: #888888; /* Graue Farbe */
+    font-size: 0.8em; /* Kleine Schriftgröße */
+    text-align: center; /* Zentrierter Text */
+    width: 100%; /* Volle Breite für Zentrierung */
+    margin-top: 10px; /* Abstand nach oben zu den Buttons */
+    padding-bottom: 5px; /* Kleiner Abstand nach unten */
+    flex-shrink: 0; /* Verhindert, dass die Zeile schrumpft */
+}
