@@ -67,7 +67,7 @@
 /* --- Bottom Buttons Container --- */
 .bottom-buttons {
     display: flex;
-    justify-content: space-between; /* Space out buttons and comment */
+    justify-content: space-between; /* Behält die Buttons auseinander */
     align-items: center; /* Vertically align items */
     padding: 10px 15px;
     width: 100%;
@@ -77,14 +77,17 @@
 }
 
 /* --- Comment Style --- */
-.chat-comment {
+.chat-comment { /* Allgemeine Stilregel für beide Kommentare */
     color: #888888; /* Gray color */
-    font-size: 0.8em; /* Smaller font size */
-    text-align: center; /* Center the text */
-    flex-grow: 1; /* Allow it to take space between buttons */
-    margin: 0 10px; /* Add some horizontal spacing */
-    flex-shrink: 1; /* Allow comment to shrink if needed */
-    min-width: 0;   /* Prevent overflow issues */
+    font-size: 0.8em; /* Basis Schriftgröße */
+    text-align: center; /* Zentriert */
+    width: 100%; /* Nimmt volle Breite für Zentrierung */
+    padding: 0 5px; /* Etwas seitlicher Innenabstand */
+    box-sizing: border-box;
+    /* Entfernt: flex-grow, margin: 0 10px, flex-shrink, min-width */
+    /* Hinzugefügt: Basis-Abstand unten */
+    margin-bottom: 10px;
+    /* Visibility wird in header.css gesteuert */
 }
 
 /* --- Desktop Chat Adjustments --- */
@@ -119,17 +122,20 @@
         padding: 15px 20px;
         margin-top: 20px;
     }
-    .chat-comment {
-        font-size: 0.9em; /* Slightly larger comment font on desktop */
+    /* Desktop Kommentar - Grössere Schrift, falls gewünscht */
+    .chat-comment.desktop-comment { /* Spezifische Anpassung für Desktop-Kommentar */
+        font-size: 0.9em;
+        margin-bottom: 15px; /* Mehr Abstand unten auf Desktop */
     }
 }
 
+/* --- Credit Line Style --- */
 .credit-line {
-    color: #888888; /* Graue Farbe */
-    font-size: 0.8em; /* Kleine Schriftgröße */
-    text-align: center; /* Zentrierter Text */
-    width: 100%; /* Volle Breite für Zentrierung */
-    margin-top: 10px; /* Abstand nach oben zu den Buttons */
-    padding-bottom: 5px; /* Kleiner Abstand nach unten */
-    flex-shrink: 0; /* Verhindert, dass die Zeile schrumpft */
+    color: #888888; /* Gray color */
+    font-size: 0.8em; /* Small font size */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure it takes full width for centering */
+    margin-top: 10px; /* Space above the credit line */
+    padding-bottom: 5px; /* Optional: Add some padding below */
+    flex-shrink: 0; /* Prevent shrinking */
 }

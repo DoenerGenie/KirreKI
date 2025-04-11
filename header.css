@@ -33,11 +33,11 @@ body.sidebar-visible .burger-button span:nth-child(3) { transform: translateY(-8
 /* --- Mobile Header --- */
 .mobile-header {
     display: flex;
-    align-items: center;
+    align-items: center; /* Zentriert Elemente vertikal */
     justify-content: space-between;
-    padding: 0 5px 15px 5px;
-    margin-top: 45px; /* Space below burger button */
-    flex-shrink: 0; /* Prevent shrinking */
+    padding: 0 5px 10px 5px; /* Padding unten leicht reduziert */
+    margin-top: 45px;
+    flex-shrink: 0;
     width: 100%;
     box-sizing: border-box;
 }
@@ -51,18 +51,45 @@ body.sidebar-visible .burger-button span:nth-child(3) { transform: translateY(-8
 .mobile-header .left-image { order: 1; }
 .mobile-header .right-image { order: 3; }
 
-.mobile-header h1#chatTitle {
+/* NEU: Container für Titel und Kommentar */
+.mobile-title-area {
     order: 2;
     flex-grow: 1;
     text-align: center;
-    font-size: 1.3em;
-    margin: 0 10px;
+    margin: 0 5px; /* Kleiner Abstand zu den Bildern */
     padding: 0;
+    display: flex; /* Ermöglicht Stapeln */
+    flex-direction: column; /* Titel und Kommentar untereinander */
+    align-items: center; /* Zentriert horizontal */
 }
+
+/* Bestehenden Titel anpassen */
+.mobile-title-area h1#chatTitle {
+    /* order: 2; flex-grow: 1; text-align: center; Entfernt, da im Container */
+    font-size: 1.3em;
+    margin: 0; /* Entfernt alten Margin */
+    padding: 0;
+    margin-bottom: 0px; /* Sehr kleiner Abstand zum Kommentar */
+}
+
+/* Regel für mobilen Kommentar */
+.mobile-comment {
+    display: block; /* Standardmässig sichtbar */
+    font-size: 0.75em; /* Kleinere Schrift */
+    margin-top: -2px; /* Ggf. anpassen, um näher am Titel zu sein */
+    margin-bottom: 0; /* Kein extra Abstand unten im Header */
+    /* Vererbt Farbe, Textausrichtung etc. von .chat-comment aus chat.css */
+}
+
+/* Regel für Desktop-Kommentar (Standard: versteckt) */
+.desktop-comment {
+    display: none;
+}
+
 
 /* --- Desktop Title (Hidden on Mobile) --- */
 #desktopChatTitle {
-    display: none; /* Hide the desktop H1 on mobile */
+    display: none; /* Hide the desktop H1 on mobile by default */
 }
 
 /* --- Desktop Header Adjustments --- */
@@ -76,13 +103,23 @@ body.sidebar-visible .burger-button span:nth-child(3) { transform: translateY(-8
     .mobile-header {
         display: none;
     }
+    /* Verstecke spezifisch den mobilen Kommentar auch auf Desktop */
+    .mobile-comment {
+        display: none;
+    }
+    /* Zeige spezifisch den Desktop-Kommentar auf Desktop */
+    .desktop-comment {
+        display: block;
+        margin-top: -10px; /* Negativer Margin um näher am Titel zu sein, anpassen nach Bedarf */
+        /* Weitere Styles für Desktop-Kommentar sind in chat.css */
+    }
 
     /* Show Desktop Title */
     #desktopChatTitle {
         display: block; /* Show desktop title */
         text-align: center;
         margin-top: 0;
-        margin-bottom: 25px;
+        margin-bottom: 15px; /* Mehr Platz zum Kommentar (oder weniger, wenn margin-top am Kommentar angepasst) */
         font-size: 1.8em;
         padding: 0;
         flex-shrink: 0; /* Prevent shrinking */
