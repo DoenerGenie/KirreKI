@@ -2,6 +2,7 @@
 const chatTitle = document.getElementById('chatTitle');
 const desktopChatTitle = document.getElementById('desktopChatTitle');
 const chatContent = document.getElementById('chatContent');
+const chatContainer = document.querySelector('.chat-container');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const chatList = document.getElementById('chatList');
@@ -108,10 +109,13 @@ function displayChat(index) {
         messageDiv.appendChild(timeDiv);
         chatContent.appendChild(messageDiv);
     });
-    // Scroll to bottom after messages are added
-    setTimeout(() => chatContent.scrollTop = chatContent.scrollHeight, 0);
+
     updateButtons();
     setActiveSidebarItem(index);
+    // Scroll to top when chat changes
+    if (chatContainer) { // Sicherstellen, dass das Element existiert
+        chatContainer.scrollTop = 0;
+    }
 }
 
 
