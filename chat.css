@@ -69,25 +69,36 @@
     display: flex;
     justify-content: space-between; /* Behält die Buttons auseinander */
     align-items: center; /* Vertically align items */
-    padding: 10px 15px;
+    padding: 10px 15px; /* Horizontal padding */
+    padding-bottom: 20px; /* NEU: Abstand nach unten */
     width: 100%;
     box-sizing: border-box;
     margin-top: 15px; /* Space above buttons */
     flex-shrink: 0; /* Prevent this container from shrinking */
 }
 
-/* --- Comment Style --- */
-.chat-comment { /* Allgemeine Stilregel für beide Kommentare */
+/* --- Comment Style (under title) --- */
+.chat-comment { /* Allgemeine Stilregel für Kommentare unter Titeln */
     color: #888888; /* Gray color */
-    font-size: 0.8em; /* Basis Schriftgröße */
+    font-size: 0.9em; /* Basis Schriftgröße */
     text-align: center; /* Zentriert */
     width: 100%; /* Nimmt volle Breite für Zentrierung */
     padding: 0 5px; /* Etwas seitlicher Innenabstand */
     box-sizing: border-box;
-    /* Entfernt: flex-grow, margin: 0 10px, flex-shrink, min-width */
-    /* Hinzugefügt: Basis-Abstand unten */
     margin-bottom: 10px;
     /* Visibility wird in header.css gesteuert */
+}
+
+/* --- Credit Line Style (between buttons) --- */
+.credit-line {
+    color: #888888; /* Gray color */
+    font-size: 0.9em; /* Small font size */
+    text-align: center; /* Center the text */
+    flex-grow: 1; /* Nimmt verfügbaren Platz ein */
+    margin: 0 10px; /* Horizontaler Abstand zu Buttons */
+    flex-shrink: 1; /* Erlaubt Schrumpfen */
+    min-width: 0;   /* Verhindert Überlaufen */
+    /* Entfernt: width: 100%; margin-top: 10px; padding-bottom: 5px; */
 }
 
 /* --- Desktop Chat Adjustments --- */
@@ -119,23 +130,11 @@
 
     /* Bottom Buttons & Comment */
     .bottom-buttons {
-        padding: 15px 20px;
+        padding: 15px 20px; /* Horizontal padding */
         margin-top: 20px;
     }
-    /* Desktop Kommentar - Grössere Schrift, falls gewünscht */
-    .chat-comment.desktop-comment { /* Spezifische Anpassung für Desktop-Kommentar */
-        font-size: 0.9em;
+    /* Desktop Kommentar (unter Titel) - Grössere Schrift, falls gewünscht */
+    .chat-comment.desktop-comment {
         margin-bottom: 15px; /* Mehr Abstand unten auf Desktop */
     }
-}
-
-/* --- Credit Line Style --- */
-.credit-line {
-    color: #888888; /* Gray color */
-    font-size: 0.8em; /* Small font size */
-    text-align: center; /* Center the text */
-    width: 100%; /* Ensure it takes full width for centering */
-    margin-top: 10px; /* Space above the credit line */
-    padding-bottom: 5px; /* Optional: Add some padding below */
-    flex-shrink: 0; /* Prevent shrinking */
 }

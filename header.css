@@ -43,8 +43,8 @@ body.sidebar-visible .burger-button span:nth-child(3) { transform: translateY(-8
 }
 
 .mobile-header .side-image {
-    max-height: 40px;
-    max-width: 40px;
+    max-height: 50px;
+    max-width: 50px;
     flex-shrink: 0;
     display: block;
 }
@@ -76,7 +76,7 @@ body.sidebar-visible .burger-button span:nth-child(3) { transform: translateY(-8
 .mobile-comment {
     display: block; /* Standardmässig sichtbar */
     font-size: 0.75em; /* Kleinere Schrift */
-    margin-top: -2px; /* Ggf. anpassen, um näher am Titel zu sein */
+    margin-top: 5px; /* Ggf. anpassen, um näher am Titel zu sein */
     margin-bottom: 0; /* Kein extra Abstand unten im Header */
     /* Vererbt Farbe, Textausrichtung etc. von .chat-comment aus chat.css */
 }
