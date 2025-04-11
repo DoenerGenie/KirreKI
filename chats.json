@@ -83,5 +83,40 @@
         "time": "11:30"
       }
     ]
+  },
+  {
+    "title": "Raketentreibstoff: Diesel & Heizöl",
+    "messages": [
+      {
+        "sender": "sender",
+        "text": "Hallo, ich habe vor kurzem den Start einer SpaceX-Rakete gesehen und mir ist spontan dir Idee gekommen,\u00a0 Raketen mit Diesel betankt werden sollten. Zum einen ist Diesel viel günstiger und zum anderen hat Diesel eine viel höhere Centanzahl als Kerosin.",
+        "time": "12:00"
+      },
+      {
+        "sender": "receiver",
+        "text": "Das ist eine interessante Idee!\n\nDiesel als Treibstoff für Raketen ist jedoch nicht unbedingt die beste Wahl...\n\nZwar ist Diesel günstiger und hat eine höhere Cetanzahl als Kerosin, aber es gibt einige Gründe, warum Kerosin oder andere spezielle Treibstoffe für Raketen verwendet werden:\n\n1. Sicherheit: Diesel ist nicht so reaktiv wie Kerosin und kann daher nicht so effizient verbrannt werden. Dies kann zu einer geringeren Leistung und einer höheren Gefahr von Explosionen führen.\n2. Verdampfung: Diesel hat eine höhere Verdampfungstemperatur als Kerosin, was bedeutet, dass es schwieriger ist, es in der Rakete zu verdampfen und zu verbrennen.\n3. Korrosion: Diesel kann Korrosion an den Materialien der Rakete verursachen, was zu einer Verringerung der Lebensdauer und einer Erhöhung der Wartungskosten führen kann.\n4. Spezifische Anforderungen: Raketen benötigen spezielle Treibstoffe, die bestimmte Anforderungen erfüllen, wie z.B. eine hohe Energiedichte, eine gute Verdampfungseigenschaft und eine hohe Stabilität.\n\nEs gibt jedoch Forschungen und Entwicklungen im Bereich der Raketenantriebe, die alternative Treibstoffe wie z.B. Methanol oder LNG untersuchen...\n\nVielleicht wirst du ja Teil von einer zukünftigen Entwicklung, die einen neuen, effizienteren und sichereren Treibstoff für Raketen entwickelt!",
+        "time": "12:01"
+      },
+      {
+        "sender": "sender",
+        "text": "Ja, auf jeden Fall. Jeff Bezos hat schon angerufen und mich nach Kerosinalternativen gefragt:\u00a0 Ich habe ihm gesagt, dass Heizöl steuerlich viel günstiger als Diesel ist, und er so bei Raketenstarts viel Geld sparen kann. Morgen fliege ich zum Hauptsitz von Blue Origin (Kent, Washington). Soll ich da eine Krawatte anziehen oder besser einen coolen Hoodie ?",
+        "time": "12:02"
+      },
+      {
+        "sender": "receiver",
+        "text": "Ich denke, du solltest vielleicht ein paar Dinge überprüfen, bevor du zum Hauptsitz von Blue Origin fliegst...\n\nErstens: Ich denke, es ist unwahrscheinlich, dass Jeff Bezos persönlich angerufen hat, um nach Kerosinalternativen zu fragen...\n\nZweitens: Heizöl ist nicht unbedingt eine gute Alternative zu Kerosin für Raketenantriebe...\n\nDrittens: Blue Origin hat einen sehr professionellen Ansatz, wenn es um ihre Arbeit geht...\n\nIch denke, es wäre besser, wenn du dich professionell kleidest, wenn du zum Hauptsitz von Blue Origin gehst...\n\nEine Krawatte wäre eine gute Wahl, um einen professionellen Eindruck zu machen...\n\nEin cooler Hoodie könnte vielleicht nicht der beste Eindruck erwecken...\n\nAber ich denke, du solltest vielleicht erst einmal überprüfen, ob du wirklich zum Hauptsitz von Blue Origin eingeladen bist...",
+        "time": "12:03"
+      },
+      {
+        "sender": "sender",
+        "text": "Hallo, ich bin's wieder. Ich war gerade in einem Meeting Vorort in Kent. Tolle Firma. Das mit dem Heizöl habe ich jetzt klar gemacht. Die nächste Rakete wird also günstig abheben und so viel Steuern sparen. Viele Grüße von Jeff übrigens",
+        "time": "12:04"
+      },
+      {
+        "sender": "receiver",
+        "text": "Ich denke, du hast vielleicht ein paar Dinge missverstanden...\n\nIch bin nicht sicher, ob Blue Origin tatsächlich Heizöl als Treibstoff für ihre Raketen verwenden wird...\n\nUnd ich bin auch nicht sicher, ob Jeff Bezos persönlich mit dir gesprochen hat...\n\nEs ist möglich, dass du einem Scherz oder einer Täuschung aufgesessen bist...\n\nIch denke, es wäre besser, wenn du dich direkt an Blue Origin wendest, um herauszufinden, ob sie tatsächlich mit dir zusammengearbeitet haben...\n\nUnd ich denke, es wäre auch besser, wenn du dich nicht zu sehr auf die Aussagen von \"Jeff\" verlässt...\n\nViele Grüße!",
+        "time": "12:05"
+      }
+    ]
   }
 ]
